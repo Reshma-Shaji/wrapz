@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-dark: #12100E;
+  --gold-accent: #CBA258;
+  --gold-hover: #DFB76C;
+  --cream-text: #F5EFE6;
+  --muted-text: #A39D93;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-bg: #12100E;
+  --color-brand-gold: #CBA258;
+  --color-brand-cream: #F5EFE6;
+
+  --font-serif: var(--font-cormorant), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-manrope), sans-serif;
+  --font-playfair: var(--font-playfair), "playfair";
+  --font-cinzel: var(--font-cinzel), serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  background-color: #12100E;
+  color: #F5EFE6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--font-manrope), sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+::selection {
+  background-color: #CBA258;
+  color: #12100E;
 }
